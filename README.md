@@ -31,80 +31,75 @@ Este projeto tem como objetivo automatizar a captura de links de afiliados do Me
 ```bash
 git clone https://github.com/SEU_USUARIO/mercadolivre-affiliate-links.git
 cd mercadolivre-affiliate-links
-2. Instale as Dependências
+```
+
+### 2. Instale as Dependências
 Este projeto usa Python e as bibliotecas listadas no arquivo requirements.txt. Instale as dependências executando:
 
-bash
-Copiar código
+```bash
 pip install -r requirements.txt
-3. Configuração 🔑
+```
+
+### 3. Configuração 🔑
 Antes de rodar o script, você precisa configurar algumas informações:
 
-Arquivo de Credenciais do Google (JSON):
+#### Arquivo de Credenciais do Google (JSON):
 
-Vá até Google Cloud Console, crie um novo projeto e habilite a API do Google Sheets.
+- Vá até Google Cloud Console, crie um novo projeto e habilite a API do Google Sheets.
+- Baixe o arquivo de credenciais JSON e coloque-o na pasta do projeto. Renomeie o arquivo para SEU_ARQUIVO_CREDENCIAL.json.
 
-Baixe o arquivo de credenciais JSON e coloque-o na pasta do projeto. Renomeie o arquivo para SEU_ARQUIVO_CREDENCIAL.json.
+## ID da Planilha do Google Sheets:
 
-ID da Planilha do Google Sheets:
+- Abra a planilha do Google Sheets que você deseja usar.
+- O ID é a parte da URL entre /d/ e /edit. Exemplo:
 
-Abra a planilha do Google Sheets que você deseja usar.
-
-O ID é a parte da URL entre /d/ e /edit. Exemplo:
-
-bash
-Copiar código
+```bash
 https://docs.google.com/spreadsheets/d/SEU_ID_DE_PLANILHA/edit
-Substitua a variável ID_PLANILHA no código pelo ID da planilha.
+```
+##### Substitua a variável ID_PLANILHA no código pelo ID da planilha.
 
-Nome da Aba:
+#### Nome da Aba:
 
-Defina o nome da aba na planilha onde os dados serão salvos. O padrão é "Página1", mas você pode alterar para o nome desejado.
+- Defina o nome da aba na planilha onde os dados serão salvos. O padrão é "Página1", mas você pode alterar para o nome desejado.
 
-Cookies de Sessão:
+#### Cookies de Sessão:
 
-Para realizar o login sem problemas, é necessário que você extraia e salve seus cookies de sessão do Mercado Livre em um arquivo JSON.
+- Para realizar o login sem problemas, é necessário que você extraia e salve seus cookies de sessão do Mercado Livre em um arquivo JSON.
+- Você pode usar ferramentas como Cookie Manager para salvar os cookies do seu navegador após fazer login na sua conta do Mercado Livre.
 
-Você pode usar ferramentas como Cookie Manager para salvar os cookies do seu navegador após fazer login na sua conta do Mercado Livre.
+#### Como Rodar 🚀
+- Com tudo configurado, basta executar o script para iniciar a automação:
 
-Como Rodar 🚀
-Com tudo configurado, basta executar o script para iniciar a automação:
-
-bash
-Copiar código
+```bash
 python main.py
-Isso vai iniciar a coleta de links de afiliados do Mercado Livre e armazená-los diretamente na planilha do Google Sheets que você configurou.
+```
 
-Exemplo de Resultado 📊
-O script irá coletar dados de produtos como:
+#### Isso vai iniciar a coleta de links de afiliados do Mercado Livre e armazená-los diretamente na planilha do Google Sheets que você configurou.
 
-Título	Link Original	Link de Afiliado	Imagem
-Smartphone XYZ	https://www.mercadolivre.com.br/produtoXYZ	https://meli.la/affiliateLinkXYZ	https://www.mercadolivre.com.br/imageXYZ.jpg
+## Exemplo de Resultado 📊
+#### O script irá coletar dados de produtos como:
+- Título	Link Original	Link de Afiliado	Imagem
+- Smartphone XYZ	https://www.mercadolivre.com.br/produtoXYZ	https://meli.la/affiliateLinkXYZ	https://www.mercadolivre.com.br/imageXYZ.jpg
 
-Estrutura do Projeto 📂
-bash
-Copiar código
+## Estrutura do Projeto 📂
+```bash
 mercadolivre-affiliate-links/
 ├── main.py                        # Arquivo principal para rodar a automação
 ├── requirements.txt               # Dependências do projeto
 ├── cookies.json                   # Arquivo de cookies de sessão (gerado manualmente)
 ├── SEU_ARQUIVO_CREDENCIAL.json     # Arquivo de credenciais do Google (necessário para acessar o Google Sheets)
 └── README.md                      # Este arquivo
-Contribuindo 🤝
-Se você encontrou algum problema ou deseja contribuir para melhorar o projeto, sinta-se à vontade para fazer um fork e enviar um pull request!
+```
+### Contribuindo 🤝
+- Se você encontrou algum problema ou deseja contribuir para melhorar o projeto, sinta-se à vontade para fazer um fork e enviar um pull request!
 
-Licença 📄
-Este projeto é licenciado sob a MIT License - veja o arquivo LICENSE para mais detalhes.
+### Licença 📄
+- Este projeto é licenciado sob a MIT License - veja o arquivo LICENSE para mais detalhes.
 
-Agradecimentos 🙏
-Selenium - Para automação da navegação web.
-
-Undetected Chromedriver - Para evitar bloqueios de bot no Mercado Livre.
-
-Google Sheets API - Para integração com o Google Sheets.
-
-markdown
-Copiar código
+### Agradecimentos 🙏
+- Selenium - Para automação da navegação web.
+- Undetected Chromedriver - Para evitar bloqueios de bot no Mercado Livre.
+- Google Sheets API - Para integração com o Google Sheets.
 
 ### Explicação do README
 
